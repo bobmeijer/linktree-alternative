@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Profile from './components/Profile';
 import LinkContainer from './components/LinkContainer';
