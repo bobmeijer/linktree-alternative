@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 249, 250, 251;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 17, 24, 39;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer components {
+  .link-card {
+    @apply w-full max-w-md py-3 px-5 rounded-lg bg-primary text-white flex items-center justify-between 
+    transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] hover:shadow-md;
+  }
+  
+  .profile-container {
+    @apply flex flex-col items-center max-w-md mx-auto px-4 pt-12 pb-20;
+  }
+  
+  .profile-image {
+    @apply w-24 h-24 rounded-full overflow-hidden mb-4 ring-2 ring-primary ring-opacity-50;
+  }
+  
+  .social-icons {
+    @apply flex gap-4 mb-8;
+  }
+  
+  .dark .link-card {
+    @apply bg-opacity-90 shadow-lg shadow-gray-800/20;
+  }
+  
+  .dark .profile-image {
+    @apply ring-opacity-70;
+  }
+} 
