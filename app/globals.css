@@ -22,12 +22,12 @@ body {
 
 @layer components {
   .link-card {
-    @apply w-full max-w-md py-3 px-5 rounded-lg bg-blue-600 text-white flex items-center justify-between 
-    transition-all duration-300 hover:bg-blue-700 hover:translate-y-[-2px] hover:shadow-md;
+    @apply w-full py-3 px-5 rounded-lg bg-[#576AAB] text-white flex items-center justify-between 
+    transition-all duration-300 hover:bg-[#4A5B9A] hover:translate-y-[-2px] hover:shadow-md;
   }
   
   .link-button {
-    @apply bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200 
+    @apply bg-[#576AAB] hover:bg-[#4A5B9A] text-white rounded-md transition-colors duration-200 
     flex items-center justify-center shadow-sm hover:shadow-md;
   }
   
