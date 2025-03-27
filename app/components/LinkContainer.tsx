@@ -45,16 +45,18 @@ const LinkContainer: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center">
-      {links.map((link, index) => (
-        <Link
-          key={index}
-          title={link.title}
-          url={link.url}
-          icon={link.icon}
-          description={link.description}
-        />
-      ))}
+    <div className="w-full max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            title={link.title}
+            url={link.url}
+            icon={link.icon}
+            description={link.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };

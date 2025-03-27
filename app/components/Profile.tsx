@@ -36,7 +36,31 @@ const Profile: React.FC<ProfileProps> = ({
           unoptimized
         />
       </div>
-      <h1 className="text-2xl font-bold mt-4 mb-2">{name}</h1>
+      <div className="flex flex-col items-center">
+        <h1 className="text-2xl font-bold mt-4 mb-1">{name}</h1>
+        <div className="social-icons justify-center mb-2">
+          {socials.linkedin && (
+            <a
+              href={socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-opacity-80 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin size={20} />
+            </a>
+          )}
+          {socials.email && (
+            <a
+              href={`mailto:${socials.email}`}
+              className="text-primary hover:text-opacity-80 transition-colors"
+              aria-label="Email"
+            >
+              <FiMail size={20} />
+            </a>
+          )}
+        </div>
+      </div>
       <p className="text-gray-600 dark:text-gray-300 mb-4">{bio}</p>
       
       {credentials.length > 0 && (
@@ -51,29 +75,6 @@ const Profile: React.FC<ProfileProps> = ({
           ))}
         </div>
       )}
-      
-      <div className="social-icons justify-center">
-        {socials.linkedin && (
-          <a
-            href={socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-opacity-80 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <FiLinkedin size={24} />
-          </a>
-        )}
-        {socials.email && (
-          <a
-            href={`mailto:${socials.email}`}
-            className="text-primary hover:text-opacity-80 transition-colors"
-            aria-label="Email"
-          >
-            <FiMail size={24} />
-          </a>
-        )}
-      </div>
     </div>
   );
 };
