@@ -41,8 +41,9 @@ const Profile: React.FC<ProfileProps> = ({
   
   return (
     <div className="mb-8 w-full">
+      {/* Profile section */}
       <div className="flex flex-col items-center mb-8">
-        <div className="profile-section flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-6 w-full max-w-sm sm:max-w-md md:max-w-lg">
+        <div id="profileSection" className="profile-section flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-6 w-full max-w-sm sm:max-w-md md:max-w-lg">
           <div className="profile-image mb-0">
             <Image
               src={image}
@@ -89,9 +90,13 @@ const Profile: React.FC<ProfileProps> = ({
         </div>
       </div>
       
+      {/* USP box section */}
       {credentials.length > 0 && (
         <div className="w-full flex justify-center mb-8">
-          <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full mx-auto md:w-auto md:min-w-fit" style={{ maxWidth: 'var(--profile-width, 32rem)' }}>
+          <div 
+            id="credentialsBox"
+            className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm mx-auto"
+          >
             {credentials.map((credential, index) => (
               <div key={index} className="flex items-center mb-3">
                 <span className="text-green-500 mr-2 flex-shrink-0">
@@ -104,18 +109,21 @@ const Profile: React.FC<ProfileProps> = ({
         </div>
       )}
 
+      {/* Script to match credentials box width with profile section width */}
       <script dangerouslySetInnerHTML={{
         __html: `
           document.addEventListener('DOMContentLoaded', function() {
-            function updateWidth() {
-              const profileSection = document.querySelector('.profile-section');
-              if (profileSection) {
+            const updateWidth = () => {
+              const profileSection = document.getElementById('profileSection');
+              const credentialsBox = document.getElementById('credentialsBox');
+              
+              if (profileSection && credentialsBox) {
                 const width = profileSection.offsetWidth;
-                document.documentElement.style.setProperty('--profile-width', width + 'px');
+                credentialsBox.style.width = width + 'px';
               }
-            }
+            };
             
-            // Update on load and resize
+            // Update initially and on window resize
             updateWidth();
             window.addEventListener('resize', updateWidth);
           });

@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 249, 250, 251;
   --primary-color: 87, 106, 171;
-  --profile-width: 32rem; /* Default value, will be updated by JS */
 }
 
 .dark {
