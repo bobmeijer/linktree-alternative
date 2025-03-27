@@ -65,30 +65,24 @@ const Profile: React.FC<ProfileProps> = ({
             </div>
           </div>
           
-          <p className="text-gray-600 dark:text-gray-300 text-lg">{bio}</p>
+          <p className="text-gray-600 dark:text-gray-300 text-sm">{bio}</p>
         </div>
       </div>
       
       {credentials.length > 0 && (
         <div className="w-full flex justify-center mb-8">
-          <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {credentials.map((credential, index) => (
-                <div key={index} className="flex items-center">
-                  <span className="text-green-500 mr-2 flex-shrink-0">
-                    <BsCheckCircleFill size={14} />
-                  </span>
-                  <span className="text-gray-700 dark:text-gray-300 text-sm">{credential}</span>
-                </div>
-              ))}
-            </div>
+          <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full max-w-md mx-auto">
+            {credentials.map((credential, index) => (
+              <div key={index} className="flex items-center mb-3">
+                <span className="text-green-500 mr-2 flex-shrink-0">
+                  <BsCheckCircleFill size={14} />
+                </span>
+                <span className="text-gray-700 dark:text-gray-300 text-sm">{credential}</span>
+              </div>
+            ))}
           </div>
         </div>
       )}
-      
-      <div className="w-full flex justify-center mb-6">
-        <h2 className="text-xl font-semibold text-center">How I can help</h2>
-      </div>
     </div>
   );
 };
