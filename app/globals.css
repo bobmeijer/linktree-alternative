@@ -36,7 +36,7 @@ body {
   }
   
   .profile-image {
-    @apply w-24 h-24 rounded-full overflow-hidden mb-4 ring-2 ring-blue-500 ring-opacity-50;
+    @apply w-24 h-24 rounded-full overflow-hidden mb-4;
   }
   
   .social-icons {
@@ -48,14 +48,10 @@ body {
   }
   
   .credentials-list {
-    @apply bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mb-6;
+    @apply inline-block bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mb-6;
   }
   
   .dark .link-card {
     @apply bg-opacity-90 shadow-lg shadow-gray-800/20;
-  }
-  
-  .dark .profile-image {
-    @apply ring-opacity-70;
   }
 } 

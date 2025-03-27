@@ -1,17 +1,17 @@
 "use client";
 
 import React from 'react';
-import { FiMessageSquare } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
 
 const ContactButton: React.FC = () => {
   return (
-    <div className="w-full flex justify-center mt-8">
+    <div className="w-full flex justify-center">
       <a
-        href="mailto:info@bobmeijer.nl"
-        className="link-button w-full max-w-[600px] py-3 px-6 flex items-center justify-center"
+        href="mailto:bob@ppcmastery.com"
+        className="w-fit flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 shadow-lg hover:shadow-xl"
       >
-        <FiMessageSquare className="mr-3" />
-        <span className="font-medium">Send me a message</span>
+        <FiMail className="w-5 h-5" />
+        <span>Contact me</span>
       </a>
     </div>
   );
