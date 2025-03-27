@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from './Link';
 import { 
-  FiBookOpen, 
   FiUsers, 
   FiMail, 
   FiFileText, 
@@ -19,27 +18,22 @@ interface LinkItem {
 const LinkContainer: React.FC = () => {
   const links: LinkItem[] = [
     {
-      title: 'Google Ads courses',
+      title: 'I want to join The PPC Hub',
       url: 'https://www.ppcmastery.com/hub',
-      icon: <FiBookOpen />,
-    },
-    {
-      title: 'Google Ads community',
-      url: 'https://example.com/community',
       icon: <FiUsers />,
     },
     {
-      title: 'Google Ads newsletter',
+      title: 'I want to subscribe to The PPC Edge',
       url: 'https://www.ppcmastery.com/blog',
       icon: <FiMail />,
     },
     {
-      title: 'Google Ads audit',
+      title: 'I want you to audit my Google Ads account',
       url: 'https://bobmeijer.nl/en/google-ads-audit/',
       icon: <FiFileText />,
     },
     {
-      title: 'Outsource Google Ads',
+      title: 'I want you run Google Ads for me',
       url: 'https://bobmeijer.nl/en/outsource-google-ads/',
       icon: <FiMonitor />,
     },
