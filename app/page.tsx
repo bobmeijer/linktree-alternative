@@ -9,8 +9,8 @@ import ThemeToggle from './components/ThemeToggle.jsx';
 export default function Home() {
   const credentials = [
     "10 Years of Experience with Google Ads",
-    "2x Top 50 Most Influential PPC Expert",
-    "Managing €2M+/mo in Google Ads",
+    "2x Top 50 Most Influential PPC Expert (2024 & 2025)",
+    "Managing €2M+/mo in Google Ads ad spend",
     "Trained 1000s of Google Ads Specialists"
   ];
 
@@ -19,7 +19,7 @@ export default function Home() {
       <ThemeToggle />
       <Profile
         name="Bob Meijer"
-        bio="I help Google Ads specialists to get the most out of Google Ads (and excel in their careers)."
+        bio="I help Google Ads specialists to get the most out of Google Ads and excel in their careers"
         image="/bobmeijerv1.webp"
         socials={{
           linkedin: "https://www.linkedin.com/in/bmmeijer/",

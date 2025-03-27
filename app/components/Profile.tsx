@@ -36,9 +36,9 @@ const Profile: React.FC<ProfileProps> = ({
           unoptimized
         />
       </div>
-      <div className="flex flex-col items-center">
-        <h1 className="text-2xl font-bold mt-4 mb-1">{name}</h1>
-        <div className="social-icons justify-center mb-2">
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <h1 className="text-2xl font-bold">{name}</h1>
+        <div className="social-icons">
           {socials.linkedin && (
             <a
               href={socials.linkedin}
@@ -61,7 +61,7 @@ const Profile: React.FC<ProfileProps> = ({
           )}
         </div>
       </div>
-      <p className="text-gray-600 dark:text-gray-300 mb-4">{bio}</p>
+      <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md mx-auto">{bio}</p>
       
       {credentials.length > 0 && (
         <div className="credentials-list max-w-md mx-auto mb-6">

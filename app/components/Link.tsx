@@ -19,10 +19,7 @@ const Link: React.FC<LinkProps> = ({
   return (
     <div className="card-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col">
       <div className="p-6 flex-grow">
-        <h3 className="text-lg font-semibold mb-3 flex items-center">
-          {icon && <span className="mr-2">{icon}</span>}
-          {title}
-        </h3>
+        <h3 className="text-lg font-semibold mb-3">{title}</h3>
         {description && (
           <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">{description}</p>
         )}
@@ -34,7 +31,8 @@ const Link: React.FC<LinkProps> = ({
           rel="noopener noreferrer"
           className="link-button w-full py-3 px-4 flex items-center justify-center"
         >
-          <span className="font-medium">Learn more</span>
+          {icon && <span className="mr-2">{icon}</span>}
+          <span className="font-medium">{title}</span>
           <FiChevronRight className="ml-2" />
         </a>
       </div>
