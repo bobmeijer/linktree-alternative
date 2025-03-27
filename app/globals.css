@@ -5,13 +5,13 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 249, 250, 251;
-  --primary-color: 37, 99, 235;
+  --primary-color: 87, 106, 171;
 }
 
 .dark {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 17, 24, 39;
-  --primary-color: 59, 130, 246;
+  --primary-color: 87, 106, 171;
 }
 
 body {
@@ -22,12 +22,12 @@ body {
 
 @layer components {
   .link-card {
-    @apply w-full py-3 px-5 rounded-lg bg-[#576AAB] text-white flex items-center justify-between 
-    transition-all duration-300 hover:bg-[#4A5B9A] hover:translate-y-[-2px] hover:shadow-md;
+    @apply w-full max-w-md py-3 px-5 rounded-lg bg-[#576AAB] text-white flex items-center justify-between 
+    transition-all duration-300 hover:bg-[#465599] hover:translate-y-[-2px] hover:shadow-md;
   }
   
   .link-button {
-    @apply bg-[#576AAB] hover:bg-[#4A5B9A] text-white rounded-md transition-colors duration-200 
+    @apply bg-[#576AAB] hover:bg-[#465599] text-white rounded-md transition-colors duration-200 
     flex items-center justify-center shadow-sm hover:shadow-md;
   }
   
