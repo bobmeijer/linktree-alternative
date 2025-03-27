@@ -8,10 +8,10 @@ import ThemeToggle from './components/ThemeToggle.jsx';
 
 export default function Home() {
   const credentials = [
-    "10 Years of Experience with Google Ads",
+    "10 Years of Experience",
     "2x Top 50 Most Influential PPC Expert",
     "Managing €2M+/mo in Google Ads",
-    "Trained 1000s of Google Ads Specialists"
+    "Trained 1000s of Google Ads experts"
   ];
 
   return (
