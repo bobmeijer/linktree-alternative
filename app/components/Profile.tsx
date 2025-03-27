@@ -23,6 +23,9 @@ const Profile: React.FC<ProfileProps> = ({
   socials,
   credentials = []
 }: ProfileProps) => {
+  // Split the bio by newline character to handle line breaks
+  const bioLines = bio.split('\n');
+  
   return (
     <div className="mb-8 w-full">
       <div className="flex flex-col items-center mb-8">
@@ -66,7 +69,14 @@ const Profile: React.FC<ProfileProps> = ({
               </div>
             </div>
             
-            <p className="text-gray-600 dark:text-gray-300 text-sm">{bio}</p>
+            <div className="text-gray-600 dark:text-gray-300 text-sm">
+              {bioLines.map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < bioLines.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>
