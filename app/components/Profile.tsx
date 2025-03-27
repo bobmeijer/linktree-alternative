@@ -24,7 +24,7 @@ const Profile: React.FC<ProfileProps> = ({
   credentials = []
 }: ProfileProps) => {
   return (
-    <div className="text-center mb-8">
+    <div className="mb-8 w-full">
       <div className="profile-image mx-auto">
         <Image
           src={image}
@@ -36,7 +36,7 @@ const Profile: React.FC<ProfileProps> = ({
           unoptimized
         />
       </div>
-      <div className="flex items-center justify-center gap-2 mb-2">
+      <div className="flex items-center justify-center gap-2 mb-4">
         <h1 className="text-2xl font-bold">{name}</h1>
         <div className="social-icons">
           {socials.linkedin && (
@@ -61,20 +61,31 @@ const Profile: React.FC<ProfileProps> = ({
           )}
         </div>
       </div>
-      <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md mx-auto">{bio}</p>
       
-      {credentials.length > 0 && (
-        <div className="credentials-list inline-block bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mb-6">
-          {credentials.map((credential, index) => (
-            <div key={index} className="flex items-center mb-2 text-left">
-              <span className="text-green-500 mr-2 flex-shrink-0">
-                <BsCheckCircleFill size={14} />
-              </span>
-              <span className="text-gray-700 dark:text-gray-300 text-sm">{credential}</span>
+      <div className="w-full flex justify-center mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+          <div className="flex items-center justify-center">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full h-full flex items-center">
+              <p className="text-gray-600 dark:text-gray-300 text-lg">{bio}</p>
             </div>
-          ))}
+          </div>
+          
+          {credentials.length > 0 && (
+            <div className="flex items-center justify-center">
+              <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full">
+                {credentials.map((credential, index) => (
+                  <div key={index} className="flex items-center mb-2 text-left">
+                    <span className="text-green-500 mr-2 flex-shrink-0">
+                      <BsCheckCircleFill size={14} />
+                    </span>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm">{credential}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };

@@ -35,7 +35,7 @@ const LinkContainer: React.FC = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-6xl">
         {links.map((link, index) => (
           <Link
             key={index}
