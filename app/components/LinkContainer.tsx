@@ -45,8 +45,8 @@ const LinkContainer: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div className="flex flex-col gap-6">
+    <div className="w-full flex justify-center">
+      <div className="flex flex-col gap-6 max-w-[600px]">
         {links.map((link, index) => (
           <Link
             key={index}

@@ -64,7 +64,7 @@ const Profile: React.FC<ProfileProps> = ({
       <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md mx-auto">{bio}</p>
       
       {credentials.length > 0 && (
-        <div className="credentials-list max-w-md mx-auto mb-6">
+        <div className="credentials-list inline-block bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mb-6">
           {credentials.map((credential, index) => (
             <div key={index} className="flex items-center mb-2 text-left">
               <span className="text-green-500 mr-2 flex-shrink-0">

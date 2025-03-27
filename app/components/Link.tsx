@@ -17,7 +17,7 @@ const Link: React.FC<LinkProps> = ({
   description
 }: LinkProps) => {
   return (
-    <div className="card-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col">
+    <div className="card-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col w-full">
       <div className="p-6 flex-grow">
         <h3 className="text-lg font-semibold mb-3">{title}</h3>
         {description && (
