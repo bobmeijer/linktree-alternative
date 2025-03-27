@@ -6,7 +6,7 @@ import { FiMessageSquare } from 'react-icons/fi';
 const ContactButton: React.FC = () => {
   return (
     <a
-      href="mailto:contact@example.com"
+      href="mailto:info@bobmeijer.nl"
       className="link-card mt-4 bg-opacity-90 hover:bg-opacity-100"
     >
       <div className="flex items-center">

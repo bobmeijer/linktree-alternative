@@ -7,7 +7,6 @@ import {
   FiUsers, 
   FiMail, 
   FiFileText, 
-  FiHeadphones, 
   FiMonitor 
 } from 'react-icons/fi';
 
@@ -21,7 +20,7 @@ const LinkContainer: React.FC = () => {
   const links: LinkItem[] = [
     {
       title: 'Google Ads courses',
-      url: 'https://example.com/courses',
+      url: 'https://www.ppcmastery.com/hub',
       icon: <FiBookOpen />,
     },
     {
@@ -31,22 +30,17 @@ const LinkContainer: React.FC = () => {
     },
     {
       title: 'Google Ads newsletter',
-      url: 'https://example.com/newsletter',
+      url: 'https://www.ppcmastery.com/blog',
       icon: <FiMail />,
     },
     {
-      title: 'Google Ads coaching',
-      url: 'https://example.com/coaching',
-      icon: <FiHeadphones />,
-    },
-    {
       title: 'Google Ads audit',
-      url: 'https://example.com/audit',
+      url: 'https://bobmeijer.nl/en/google-ads-audit/',
       icon: <FiFileText />,
     },
     {
       title: 'Outsource Google Ads',
-      url: 'https://example.com/outsource',
+      url: 'https://bobmeijer.nl/en/outsource-google-ads/',
       icon: <FiMonitor />,
     },
   ];

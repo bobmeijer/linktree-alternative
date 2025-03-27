@@ -15,8 +15,8 @@ export default function Home() {
         bio="I help Google Ads specialists to excel in their careers"
         image="/bobmeijerv1.webp"
         socials={{
-          linkedin: "https://linkedin.com/in/example",
-          email: "contact@example.com"
+          linkedin: "https://www.linkedin.com/in/bmmeijer/",
+          email: "info@bobmeijer.nl"
         }}
       />
       <LinkContainer />
