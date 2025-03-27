@@ -8,13 +8,15 @@ interface LinkProps {
   url: string;
   icon?: React.ReactNode;
   description?: string;
+  ctaText?: string;
 }
 
 const Link: React.FC<LinkProps> = ({ 
   title,
   url,
   icon,
-  description
+  description,
+  ctaText
 }: LinkProps) => {
   return (
     <div className="card-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full flex flex-col w-full">
@@ -31,7 +33,7 @@ const Link: React.FC<LinkProps> = ({
           rel="noopener noreferrer"
           className="link-button w-full py-3 px-4 flex items-center justify-center"
         >
-          <span className="font-medium">Learn more</span>
+          <span className="font-medium">{ctaText || "Learn more"}</span>
           <FiChevronRight className="ml-2" />
         </a>
       </div>
