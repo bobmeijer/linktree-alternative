@@ -25,47 +25,49 @@ const Profile: React.FC<ProfileProps> = ({
 }: ProfileProps) => {
   return (
     <div className="mb-8 w-full">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8 w-full max-w-6xl mx-auto">
-        <div className="profile-image mb-0">
-          <Image
-            src={image}
-            alt={`${name}'s profile picture`}
-            width={96}
-            height={96}
-            className="rounded-full object-cover"
-            priority
-            unoptimized
-          />
-        </div>
-        
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2 mb-2">
-            <h1 className="text-2xl font-bold">{name}</h1>
-            <div className="social-icons">
-              {socials.linkedin && (
-                <a
-                  href={socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-opacity-80 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <FiLinkedin size={20} />
-                </a>
-              )}
-              {socials.email && (
-                <a
-                  href={`mailto:${socials.email}`}
-                  className="text-primary hover:text-opacity-80 transition-colors"
-                  aria-label="Email"
-                >
-                  <FiMail size={20} />
-                </a>
-              )}
-            </div>
+      <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 max-w-md">
+          <div className="profile-image mb-0">
+            <Image
+              src={image}
+              alt={`${name}'s profile picture`}
+              width={96}
+              height={96}
+              className="rounded-full object-cover"
+              priority
+              unoptimized
+            />
           </div>
           
-          <p className="text-gray-600 dark:text-gray-300 text-sm">{bio}</p>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 mb-2">
+              <h1 className="text-2xl font-bold">{name}</h1>
+              <div className="social-icons">
+                {socials.linkedin && (
+                  <a
+                    href={socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-opacity-80 transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <FiLinkedin size={20} />
+                  </a>
+                )}
+                {socials.email && (
+                  <a
+                    href={`mailto:${socials.email}`}
+                    className="text-primary hover:text-opacity-80 transition-colors"
+                    aria-label="Email"
+                  >
+                    <FiMail size={20} />
+                  </a>
+                )}
+              </div>
+            </div>
+            
+            <p className="text-gray-600 dark:text-gray-300 text-sm">{bio}</p>
+          </div>
         </div>
       </div>
       
