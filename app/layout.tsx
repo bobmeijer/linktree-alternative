@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Linktree Clone',
-  description: 'A simple Linktree clone built with Next.js',
+  title: 'Bob Meijer Links',
+  description: 'A simple overview of all important links.',
 }
 
 export default function RootLayout({

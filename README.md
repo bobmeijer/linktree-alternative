@@ -1,46 +1,55 @@
-# Linktree Clone
+# Bob Meijer Links
 
-A simple Linktree clone built with Next.js, TypeScript, and Tailwind CSS.
+A simple links page built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- Responsive design (mobile-first)
-- Clean and minimal UI
-- Smooth animations and interactions
-- Social links
-- Custom link cards
-- Profile section
+- Modern, clean UI
+- Responsive design
+- Dark mode support
+- Customizable links and social media icons
+- SEO optimized
+
+## Technologies Used
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- React Icons
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (16.x or later)
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
+Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/linktree-clone.git
-cd linktree-clone
+git clone https://github.com/yourusername/bob-meijer-links.git
+cd bob-meijer-links
 ```
 
-2. Install dependencies:
+Install dependencies:
+
 ```bash
 npm install
 # or
-yarn
+yarn install
 ```
 
-3. Run the development server:
+Run the development server:
+
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Customization
 

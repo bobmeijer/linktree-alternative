@@ -15,7 +15,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="profile-container relative">
+    <div className="main-container relative">
       <ThemeToggle />
       <Profile
         name="Bob Meijer"
