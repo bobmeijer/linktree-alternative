@@ -23,8 +23,21 @@ const Profile: React.FC<ProfileProps> = ({
   socials,
   credentials = []
 }: ProfileProps) => {
-  // Split the bio by newline character to handle line breaks
-  const bioLines = bio.split('\n');
+  // Format the bio to break after "most" on desktop
+  const formatBio = () => {
+    const mostIndex = bio.indexOf("most");
+    if (mostIndex === -1) return bio;
+    
+    const firstPart = bio.substring(0, mostIndex + 4); // Include "most"
+    const secondPart = bio.substring(mostIndex + 4);
+    
+    return (
+      <>
+        <span className="md:after:content-[''] md:after:block">{firstPart}</span>
+        <span>{secondPart}</span>
+      </>
+    );
+  };
   
   return (
     <div className="mb-8 w-full">
@@ -70,12 +83,7 @@ const Profile: React.FC<ProfileProps> = ({
             </div>
             
             <div className="text-gray-600 dark:text-gray-300 text-sm">
-              {bioLines.map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  {index < bioLines.length - 1 && <br />}
-                </React.Fragment>
-              ))}
+              {formatBio()}
             </div>
           </div>
         </div>

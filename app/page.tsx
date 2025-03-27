@@ -19,7 +19,7 @@ export default function Home() {
       <ThemeToggle />
       <Profile
         name="Bob Meijer"
-        bio="I help Google Ads specialists to get the most\nout of Google Ads (and excel in their careers)."
+        bio="I help Google Ads specialists to get the most out of Google Ads (and excel in their careers)."
         image="/bobmeijerv1.webp"
         socials={{
           linkedin: "https://www.linkedin.com/in/bmmeijer/",
