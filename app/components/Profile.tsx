@@ -26,7 +26,7 @@ const Profile: React.FC<ProfileProps> = ({
   return (
     <div className="mb-8 w-full">
       <div className="flex flex-col items-center mb-8">
-        <div className="flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-6 max-w-xs">
+        <div className="flex flex-col md:flex-row items-center text-center md:text-left md:items-start gap-6 w-full max-w-sm sm:max-w-md md:max-w-lg">
           <div className="profile-image mb-0">
             <Image
               src={image}
@@ -73,7 +73,7 @@ const Profile: React.FC<ProfileProps> = ({
       
       {credentials.length > 0 && (
         <div className="w-full flex justify-center mb-8">
-          <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full max-w-xs mx-auto">
+          <div className="credentials-list bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto">
             {credentials.map((credential, index) => (
               <div key={index} className="flex items-center mb-3">
                 <span className="text-green-500 mr-2 flex-shrink-0">
