@@ -5,11 +5,13 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 249, 250, 251;
+  --primary-color: 37, 99, 235;
 }
 
 .dark {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 17, 24, 39;
+  --primary-color: 59, 130, 246;
 }
 
 body {
@@ -20,20 +22,33 @@ body {
 
 @layer components {
   .link-card {
-    @apply w-full max-w-md py-3 px-5 rounded-lg bg-primary text-white flex items-center justify-between 
-    transition-all duration-300 hover:bg-opacity-90 hover:translate-y-[-2px] hover:shadow-md;
+    @apply w-full max-w-md py-3 px-5 rounded-lg bg-blue-600 text-white flex items-center justify-between 
+    transition-all duration-300 hover:bg-blue-700 hover:translate-y-[-2px] hover:shadow-md;
+  }
+  
+  .link-button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200 
+    flex items-center justify-center shadow-sm hover:shadow-md;
   }
   
   .profile-container {
-    @apply flex flex-col items-center max-w-md mx-auto px-4 pt-12 pb-20;
+    @apply flex flex-col items-center max-w-2xl mx-auto px-4 pt-12 pb-20;
   }
   
   .profile-image {
-    @apply w-24 h-24 rounded-full overflow-hidden mb-4 ring-2 ring-primary ring-opacity-50;
+    @apply w-24 h-24 rounded-full overflow-hidden mb-4 ring-2 ring-blue-500 ring-opacity-50;
   }
   
   .social-icons {
     @apply flex gap-4 mb-8;
+  }
+  
+  .card-container {
+    @apply transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .credentials-list {
+    @apply bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm mb-6;
   }
   
   .dark .link-card {

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FiMail, FiLinkedin } from 'react-icons/fi';
+import { BsCheckCircleFill } from 'react-icons/bs';
 
 interface ProfileProps {
   name: string;
@@ -12,13 +13,15 @@ interface ProfileProps {
     linkedin?: string;
     email?: string;
   };
+  credentials?: string[];
 }
 
 const Profile: React.FC<ProfileProps> = ({ 
   name,
   bio,
   image,
-  socials
+  socials,
+  credentials = []
 }: ProfileProps) => {
   return (
     <div className="text-center mb-8">
@@ -34,7 +37,20 @@ const Profile: React.FC<ProfileProps> = ({
         />
       </div>
       <h1 className="text-2xl font-bold mt-4 mb-2">{name}</h1>
-      <p className="text-gray-600 mb-6">{bio}</p>
+      <p className="text-gray-600 dark:text-gray-300 mb-4">{bio}</p>
+      
+      {credentials.length > 0 && (
+        <div className="credentials-list max-w-md mx-auto mb-6">
+          {credentials.map((credential, index) => (
+            <div key={index} className="flex items-center mb-2 text-left">
+              <span className="text-green-500 mr-2 flex-shrink-0">
+                <BsCheckCircleFill size={14} />
+              </span>
+              <span className="text-gray-700 dark:text-gray-300 text-sm">{credential}</span>
+            </div>
+          ))}
+        </div>
+      )}
       
       <div className="social-icons justify-center">
         {socials.linkedin && (
