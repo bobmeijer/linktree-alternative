@@ -26,13 +26,13 @@ const LinkContainer: React.FC = () => {
     },
     {
       title: 'Audit my Google Ads account',
-      url: 'https://bobmeijer.nl/en/google-ads-audit/',
+      url: 'https://bobmeijer.nl/',
       description: 'Are you curious whether you\'re getting the most out of your campaigns? I\'ll map it out for you with an in-depth Google Ads audit – starting at € 2500.',
       ctaText: 'Audit my account'
     },
     {
       title: 'Run Google Ads for me',
-      url: 'https://bobmeijer.nl/en/outsource-google-ads/',
+      url: 'https://bobmeijer.nl/',
       description: 'Your Google Ads campaigns perform better with me behind the wheel. I help ambitious companies like yours get the most out of Google Ads.',
       ctaText: 'Optimize my account'
     },
